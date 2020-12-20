@@ -109,9 +109,9 @@
           db = new JankenScore();
           db.set(key, win_num).save();
 
-          msg += win_num +  "連勝でした。<br>";
+          msg += win_num +  "連続ヒットでした。<br>";
         } else {
-          msg += "1回も勝てませんでした。<br>次は頑張ろう";
+          msg += "1回も攻撃を当てることができませんでした。<br>次は頑張ろう";
         }
         $("#result2").html(msg);
         // ハンドボタン非表示
