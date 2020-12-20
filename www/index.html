@@ -64,7 +64,7 @@
         // 勝敗ごとの処理
         if(result == judge_win) {
           win_num++;
-          $("#result2").html(win_num + "連勝!");
+          $("#result2").html(win_num + "ヒット！");
         } else if (result == judge_draw) {
           $("#result2").html("あいこ");
         } else {
@@ -77,10 +77,10 @@
         JankenScore.order(key, true).fetch()
         .then(function(result){
           high_score = result.get(key);
-          $("#highscore").html("ハイスコア：" + high_score + "連勝");
+          $("#highscore").html("ハイスコア：" + high_score + "連続ヒット");
         })
         .catch(function(error){
-          $("#highscore").html("ハイスコア：" + high_score + "連勝");
+          $("#highscore").html("ハイスコア：" + high_score + "連続ヒット");
         });
   
         win_num = 0;
