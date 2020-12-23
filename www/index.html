@@ -124,6 +124,23 @@
       $(function(){
         newgame();
       })
+
+      function attackData() {
+      let JSdata = new JankenScore();
+      let value = parseInt($("#data").val());
+      JSdata.set(key, value)
+      .save()
+      .then(function(results){
+        $("#display").removeClass();
+        $("#display").addClass("bg-success");
+        $("#display").html("enter success");
+      })
+      .catch(function(results){
+        $("#display").removeClass();
+        $("#display").addClass("bg-warning");
+        $("#display").html("enter fail");
+      })
+    }
     </script>
 </head>
 <body>
