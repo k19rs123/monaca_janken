@@ -77,10 +77,10 @@
         JankenScore.order(key, true).fetch()
         .then(function(result){
           high_score = result.get(key);
-          $("#highscore").html("ハイスコア：" + high_score + "連続ヒット");
+          $("#highscore").html("ハイスコア：" + high_score + "ダメージ");
         })
         .catch(function(error){
-          $("#highscore").html("ハイスコア：" + high_score + "連続ヒット");
+          $("#highscore").html("ハイスコア：" + high_score + "ダメージ");
         });
   
         win_num = 0;
